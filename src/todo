@@ -1,0 +1,16 @@
+search:
+- lỗi chuyển qua chuyển lại OD
+
+use:
+- su dung phieu le
+
+change:
+- done
+
+move:
+- lam front: tao bang lay ma so phieu phieu moi roi send post như tạo mới
+- lam backend: ko can sua
+
+customer:
+- danh sách khách sắp hết hạn
+- tạo phiếu gọi khách
