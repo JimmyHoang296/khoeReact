@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Remind from "./Remind";
+import convertToLocalDate from "./ass";
 
 export default function RemindCard({ coupon, setListCoupon }) {
   const [showRemind, setShowRemind] = useState(false);
@@ -9,7 +10,7 @@ export default function RemindCard({ coupon, setListCoupon }) {
         <label>ticket ID: </label>
         <input value={coupon.id} disabled />
         <label>HSD: </label>
-        <input type="date" value={coupon.expDate.slice(0, 10)} disabled />
+        <input type="date" value={convertToLocalDate(coupon.expDate)} disabled />
       </div>
       <div>
         <label>Tên KH: </label>
@@ -43,7 +44,7 @@ export default function RemindCard({ coupon, setListCoupon }) {
         <tbody>
           {coupon.remind.map((remind, index) => (
             <tr key={index}>
-              <td>{remind.remindDate.slice(0, 10)}</td>
+              <td>{convertToLocalDate(remind.remindDate)}</td>
               <td>{remind.user} </td>
               <td>{remind.note} </td>
             </tr>

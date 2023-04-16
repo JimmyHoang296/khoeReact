@@ -26,7 +26,7 @@ export default function Customer() {
       const today = new Date();
       const oneDay = 24 * 60 * 60 * 1000;
       const difDay = Math.round(Math.abs((expDate - today) / oneDay));
-      return coupon.remain * 1 > 0 && expDate > today && difDay < 30;
+      return coupon.remain * 1 > 0 && expDate > today && difDay < 45;
     });
     setCusNumber(searchResult.length);
 
@@ -40,7 +40,7 @@ export default function Customer() {
       <h2>Nhắc khách</h2>
 
       <form className="search-form" onSubmit={handleSearch}>
-        <button type="submit">{cusNumber} Khách còn 1 tháng</button>
+        <button type="submit">{cusNumber} Khách còn 45 ngày</button>
       </form>
 
       <div className="search-result">

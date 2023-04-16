@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ModCard from "./ModCard";
 import MoveCard from "./MoveCard";
 import UseCard from "./UseCard";
+import convertToLocalDate from "./ass";
 
 export default function SearchCard({ isOD, coupon, setListCoupon }) {
   const [showHis, setShowHis] = useState(false);
@@ -14,7 +15,11 @@ export default function SearchCard({ isOD, coupon, setListCoupon }) {
         <label>ticket ID: </label>
         <input value={coupon.id} disabled />
         <label>HSD: </label>
-        <input type="date" value={coupon.expDate.slice(0, 10)} disabled />
+        <input
+          type="text"
+          value={convertToLocalDate(coupon.expDate)}
+          disabled
+        />
       </div>
       <div>
         <label>Tên KH: </label>
@@ -67,7 +72,7 @@ export default function SearchCard({ isOD, coupon, setListCoupon }) {
           <tbody>
             {coupon.history.map((use, index) => (
               <tr key={index}>
-                <td>{use.useDate.slice(0, 10)}</td>
+                <td>{convertToLocalDate(use.useDate)}</td>
                 <td>{use.qty} </td>
                 <td>{use.note} </td>
               </tr>
