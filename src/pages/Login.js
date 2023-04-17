@@ -61,8 +61,11 @@ export default function Login({ isLogin, setIsLogin }) {
               onChange={(e) => setSite(e.target.value)}
             >
               <option value="K1">K1</option>
+              <option value="K2">K2</option>
               <option value="K3">K3</option>
+              <option value="K4">K4</option>
               <option value="K5">K5</option>
+              <option value="K6">K6</option>
               <option value="K7">K7</option>
             </select>
           </div>
