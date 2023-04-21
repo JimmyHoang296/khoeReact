@@ -10,7 +10,7 @@ export default function RemindCard({ coupon, setListCoupon }) {
         <label>ticket ID: </label>
         <input value={coupon.id} disabled />
         <label>HSD: </label>
-        <input type="date" value={convertToLocalDate(coupon.expDate)} disabled />
+        <input type="text" value={convertToLocalDate(coupon.expDate)} disabled />
       </div>
       <div>
         <label>Tên KH: </label>
