@@ -20,7 +20,7 @@ export default function UseCard({ setListCoupon, coupon, setIsDisplay }) {
   const couponId = coupon.id;
   const [showModal, setShowModal] = useState(false);
   const couponRemain =
-    coupon.total - coupon.history.reduce((acc, cur) => acc + cur.qty, 0);
+    coupon.total - coupon.history.reduce((acc, cur) => acc + cur.qty*1, 0);
   const [useCoupon, setUseCoupon] = useState({
     useDate: getToday(),
     id: couponId,
@@ -38,7 +38,7 @@ export default function UseCard({ setListCoupon, coupon, setIsDisplay }) {
       setCaution({ state: true, message: "Nhập số phiếu để sử dụng" });
       return;
     }
-    if (useCoupon.qty > couponRemain) {
+    if (useCoupon.qty > couponRemain*1) {
       setCaution({
         state: true,
         message: "Số phiếu dùng phải nhỏ hơn số còn lại"
