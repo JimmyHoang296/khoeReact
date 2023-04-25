@@ -11,12 +11,12 @@ export default function SearchCard({ coupon, isOD, setListCoupon }) {
         <label>ticket ID: </label>
         <input value={coupon.id} disabled />
         <label>HSD: </label>
-        <input type="date" value={convertToLocalDate(coupon.expDate)} disabled />
+        <input type="text" value={convertToLocalDate(coupon.expDate)} disabled />
       </div>
       {isOD && (
         <div>
           <label>Ngày dùng: </label>
-          <input type="date" value={convertToLocalDate(coupon.expDate)} disabled />
+          <input type="text" value={convertToLocalDate(coupon.expDate)} disabled />
         </div>
       )}
 
