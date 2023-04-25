@@ -39,7 +39,7 @@ export default function SearchLe() {
 
     if (search.id) {
       searchResult = searchResult.filter(
-        (coupon) => coupon.id.toString() === search.id.toString()
+        (coupon) => coupon.id.toString().includes(search.id.toString())
       );
     }
     if (searchResult.length === 0) {
