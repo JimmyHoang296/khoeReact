@@ -32,7 +32,7 @@ export default function Search() {
       searchResult = listCoupon.ticketG.filter((coupon) => {
         const expDate = new Date(coupon.expDate);
         const today = new Date();
-        return coupon.remain * 1 === 0 || expDate < today;
+        return coupon.remain * 1 <= 0 || expDate < today;
       });
     } else {
       searchResult = listCoupon.ticketG.filter((coupon) => {
