@@ -1,3 +1,3 @@
 const URL =
-  "https://script.google.com/macros/s/AKfycbzAV__4jHZN7w4nBKWKgMotBMADLCczfflCJmDrQI6wy63w35n1aEQWiJsCMVOvJbOm/exec";
+  "https://script.google.com/macros/s/AKfycbyZrHw1qQ05thtAu3afrEwVfzTU0msIGKVia5b4IDJIRd5T2965S2yFj9cUfga_AhuO/exec";
 export default URL;
