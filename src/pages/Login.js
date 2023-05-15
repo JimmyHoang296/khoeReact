@@ -67,6 +67,8 @@ export default function Login({ isLogin, setIsLogin }) {
               <option value="K5">K5</option>
               <option value="K6">K6</option>
               <option value="K7">K7</option>
+              <option value="K8">K8</option>
+              <option value="K9">K9</option>
             </select>
           </div>
           <button id="login" type="submit">
