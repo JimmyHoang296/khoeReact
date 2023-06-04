@@ -39,7 +39,7 @@ export default function Search() {
         const expDate = new Date(coupon.expDate);
         const today = new Date();
 
-        return coupon.remain * 1 > 0 && expDate > today;
+        return coupon.remain * 1 > 0 && expDate >= today;
       });
     }
     // tim kiem theo yeu cau
