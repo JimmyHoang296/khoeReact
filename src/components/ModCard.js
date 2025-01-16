@@ -142,7 +142,7 @@ export default function ModCard({ coupon, setListCoupon, setIsDisplay }) {
             }}
           />
         </div>
-        <div className="card-item">
+        <div className="card-item" style={{ display: "none" }}>
           <label>Hạn sử dụng</label>
           <input
             type="date"
